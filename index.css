@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -20,6 +24,7 @@ body {
   grid-auto-rows: 100vh;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
+  position: relative;
 }
 
 .con-1 {
@@ -59,6 +64,7 @@ nav {
   height: 5rem;
   display: flex;
   align-items: center;
+  z-index: 100;
 }
 
 nav button {
@@ -92,4 +98,26 @@ ul {
 
 .snaps-inline > * {
   scroll-snap-align: start;
+}
+
+#navigate-next {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  border-style: none;
+  font-size: 50px;
+  color: #ffffff;
+  background: none;
+  cursor: pointer;
+}
+
+#navigate-prev {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  border-style: none;
+  font-size: 50px;
+  color: #ffffff;
+  background: none;
+  cursor: pointer;
 }
