@@ -25,21 +25,22 @@ body {
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   position: relative;
+  scroll-behavior: smooth;
 }
 
-.con-1 {
+#con-1 {
   background-color: #bce194;
 }
 
-.con-2 {
+#con-2 {
   background-color: #bbdde6;
 }
 
-.con-3 {
+#con-3 {
   background-color: #eedaea;
 }
 
-.con-4 {
+#con-4 {
   background-color: #ffc27b;
 }
 
@@ -49,7 +50,7 @@ body {
   background-color: #ffffff;
 }
 
-[class^="con-"] {
+[id^="con-"] {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +58,6 @@ body {
 
 nav {
   position: fixed;
-  /* background-color: #fff; */
   color: white;
   font-weight: bold;
   width: 100%;
@@ -76,11 +76,10 @@ nav button {
   border-radius: 10px;
 }
 
-ul {
+nav ul {
   width: 50%;
   margin: 0 auto;
   list-style-type: none;
-  padding: 0;
   display: flex;
   gap: 1rem;
   justify-content: space-between;
@@ -122,14 +121,55 @@ ul {
   cursor: pointer;
 }
 
-.navigate-central {
+[class^="nav-"] {
+  background-color: rgb(181, 180, 180);
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+[class^="nav-"]:hover {
+  background-color: black;
+}
+
+ul.navb-sec {
   position: absolute;
-  width: 60%;
+  width: 500px;
   top: 80vh;
   left: 0;
   right: 0;
   margin: auto;
-  height: 100px;
   background-color: #ffffff;
   border-radius: 30px;
+  box-shadow: 5px 5px 30px rgb(0, 0, 0, 0.3);
+  padding: 1.25rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul.navb-sec li {
+  padding: 0;
+}
+
+.navb-sec button {
+  background: none;
+  border-style: none;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.slider {
+  width: 3rem;
+  height: 80%;
+  background-color: rgb(245, 189, 18);
+  border-radius: 20px;
+  position: absolute;
+  transition: transform 0.2s ease-in-out;
+  left: calc(20% - 3rem);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
